@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_flutter/detail.dart';
-import 'package:tugas_flutter/partial/card.dart';
-import 'package:tugas_flutter/routing.dart';
+import 'package:flood_detector/detail.dart';
+import 'package:flood_detector/partial/card.dart';
+import 'package:flood_detector/routing.dart';
 
 class Chat extends StatefulWidget {
   @override
