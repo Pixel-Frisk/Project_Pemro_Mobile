@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_flutter/dashboard.dart';
-import 'package:tugas_flutter/routing.dart';
+import 'package:flood_detector/dashboard.dart';
+import 'package:flood_detector/routing.dart';
 
 class login extends StatefulWidget {
   @override
