@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flood_detector/partial/teks.dart';
 
 class CardView extends StatelessWidget {
   final Color warna;
