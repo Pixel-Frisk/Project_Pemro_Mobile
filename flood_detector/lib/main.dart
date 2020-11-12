@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_flutter/login.dart';
+import 'package:flood_detector/login.dart';
 
 void main() {
   runApp(MyApp());
