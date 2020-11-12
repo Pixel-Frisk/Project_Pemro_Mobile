@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_flutter/chat.dart';
-import 'package:tugas_flutter/routing.dart';
+import 'package:flood_detector/chat.dart';
+import 'package:flood_detector/routing.dart';
 
 class Dashboard extends StatefulWidget {
   @override
