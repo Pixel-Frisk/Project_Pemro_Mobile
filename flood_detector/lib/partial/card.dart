@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_flutter/partial/teks.dart';
 
 class CardView extends StatelessWidget {
   final Color warna;
