@@ -11,3 +11,7 @@ Nama Kelompok :
 Mohamad Fikri Nurhalimi 182410103046
 Artha Gusfi Putra       182410103088
 Jefri Melian            182410103094
+
+
+Tgl: 12 November 2020
+-Menambah Custom Widget dan ListView
