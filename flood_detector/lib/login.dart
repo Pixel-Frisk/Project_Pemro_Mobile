@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_flutter/dashboard.dart';
+import 'package:tugas_flutter/routing.dart';
 
 class login extends StatefulWidget {
   @override
@@ -36,14 +38,14 @@ class _loginState extends State<login> {
 
             TextFormField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black87)
-                ),
-                prefixIcon: Icon(Icons.person, size: 40,),
-                hintText: "Masukan Username",
-                hintStyle: TextStyle(color: Colors.black87),
-                labelText: "Username",
-                labelStyle: TextStyle(color: Colors.black87)
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black87)
+                  ),
+                  prefixIcon: Icon(Icons.person, size: 40,),
+                  hintText: "Masukan Username",
+                  hintStyle: TextStyle(color: Colors.black87),
+                  labelText: "Username",
+                  labelStyle: TextStyle(color: Colors.black87)
               ),
             ),
 
@@ -72,7 +74,9 @@ class _loginState extends State<login> {
                 height: 50,
                 child: InkWell(
                   splashColor: Colors.white,
-                  onTap: (){},
+                  onTap: (){
+                    Routes.changePage(context, Dashboard());
+                  },
                   child: Center(
                     child: Text("Login", style: TextStyle(fontSize: 20,color: Colors.white),),
                   ),
@@ -85,5 +89,3 @@ class _loginState extends State<login> {
     );
   }
 }
-
-
