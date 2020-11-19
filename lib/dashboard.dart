@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flood_detector/chat.dart';
 import 'package:flood_detector/routing.dart';
+import 'package:flood_detector/weather.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -52,6 +53,7 @@ class _DashboardState extends State<Dashboard> {
               SizedBox(height: 10),
               InkWell(
                 onTap: (){
+		  Routes.changePage(context, Weather());
                 },
                 child: Container(
                   height: 90,
