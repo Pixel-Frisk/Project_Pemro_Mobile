@@ -1,4 +1,4 @@
-name: flood_detector
+name: tugas_flutter
 description: A new Flutter application.
 
 # The following line prevents the package from being accidentally published to
@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  font_awesome_flutter: ^8.4.0
   flutter:
     sdk: flutter
 

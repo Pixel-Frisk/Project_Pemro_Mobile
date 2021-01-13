@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Weather extends StatefulWidget {
   @override
@@ -11,10 +12,54 @@ class _WeatherState extends State<Weather> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Weather"),
+        backgroundColor: Color.fromRGBO(49, 87, 110, 1.0),
       ),
-      body: new Container(
-        padding: EdgeInsets.all(0),
-        child: new Image.asset('assets/img/weather.jpg', width: 700, fit: BoxFit.fill,),
+      body: Container(
+        constraints: BoxConstraints.expand(),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/img/weather.jpg'),
+            fit: BoxFit.fill,
+          ),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              child: Icon(
+                FontAwesomeIcons.cloudRain,
+                size: 75.0,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(
+              height: 15.0,
+            ),
+            Center(
+              child: Text(
+                ' 12°',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 80.0,
+                  letterSpacing: -5,
+                ),
+              ),
+            ),
+            Center(
+              child: Text(
+                ' Berawan',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                  letterSpacing: 2,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
