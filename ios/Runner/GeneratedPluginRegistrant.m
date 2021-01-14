@@ -10,12 +10,6 @@
 @import geolocator;
 #endif
 
-#if __has_include(<location/LocationPlugin.h>)
-#import <location/LocationPlugin.h>
-#else
-@import location;
-#endif
-
 #if __has_include(<mapbox_gl/MapboxMapsPlugin.h>)
 #import <mapbox_gl/MapboxMapsPlugin.h>
 #else
@@ -38,7 +32,6 @@
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
   [GeolocatorPlugin registerWithRegistrar:[registry registrarForPlugin:@"GeolocatorPlugin"]];
-  [LocationPlugin registerWithRegistrar:[registry registrarForPlugin:@"LocationPlugin"]];
   [MapboxMapsPlugin registerWithRegistrar:[registry registrarForPlugin:@"MapboxMapsPlugin"]];
   [FLTPathProviderPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTPathProviderPlugin"]];
   [FLTSharedPreferencesPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTSharedPreferencesPlugin"]];
