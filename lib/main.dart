@@ -2,8 +2,10 @@ import 'package:flood_detector/welcome/Welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:flood_detector/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
+  //SharedPreferences.setMockInitialValues({});
   runApp(MyApp());
 }
 

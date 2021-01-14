@@ -1,6 +1,7 @@
 import 'package:flood_detector/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flood_detector/Profil/helper.dart';
 
 class profil extends StatefulWidget {
   @override
@@ -8,6 +9,21 @@ class profil extends StatefulWidget {
 }
 
 class _profilState extends State<profil> {
+  var information;
+
+  @override
+  void initState(){
+    getInformation();
+    super.initState();
+  }
+
+  void getInformation() async{
+    var y = await Helper.getInformation();
+    setState(() {
+      information = y;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -30,7 +46,8 @@ class _profilState extends State<profil> {
                 Padding(padding: const EdgeInsets.only(left: 29)),
                 CircleAvatar(
                   radius: 50,
-                  backgroundImage: AssetImage("assets/img/fotoProfil.jpg"),
+                  backgroundImage: NetworkImage("https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png")
+                  //AssetImage("assets/img/fotoProfil.jpg"),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 20),
@@ -38,7 +55,7 @@ class _profilState extends State<profil> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Brian Imanuel",
+                        "Jaka Baru",
                         style: GoogleFonts.lato(
                             color: Colors.white,
                             textStyle: Theme.of(context).textTheme.display1,
@@ -79,7 +96,7 @@ class _profilState extends State<profil> {
                 children: [
                   Padding(padding: EdgeInsets.only(top: 20)),
                   Text(
-                    "E-mail : brianimanuel12@gmail.com",
+                    "${information}",
                     style: GoogleFonts.lato(
                         color: Colors.black54,
                         textStyle: Theme.of(context).textTheme.display1,
@@ -91,12 +108,48 @@ class _profilState extends State<profil> {
               margin: EdgeInsets.symmetric(vertical: 20),
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               width: size.width * 2,
-              height: size.height * 0.61,
+              height: size.height * 0.54,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
               ),
             ),
+            // Container(
+            //   height: 170,
+            //   width: size.width *2,
+            //   color: kPrimaryCOLOR,
+            //   alignment: Alignment.center,
+            //   child: Column(
+            //     mainAxisAlignment: MainAxisAlignment.center,
+            //     children: <Widget>[
+            //       TextFormField(
+            //         controller: inputan,
+            //         decoration: InputDecoration(
+            //             border: OutlineInputBorder(
+            //                 borderRadius: BorderRadius.circular(10)
+            //             ),
+            //             labelText: "Ubah Informasi",
+            //             labelStyle: TextStyle(color: Colors.black87)
+            //         ),
+            //       ),
+            //       SizedBox(height: 20),
+            //       InkWell(
+            //         onTap: () async{
+            //           Helper.saveInformation(
+            //               inputan.text
+            //           );
+            //         },
+            //         child: Container(
+            //           alignment: Alignment.center,
+            //           color: Colors.white,
+            //           height: 40,
+            //           width: 150,
+            //           child: Text("Submit", style: TextStyle(color: Colors.blueAccent),),
+            //         ),
+            //       )
+            //     ],
+            //   ),
+            // )
           ],
         ),
       ),

@@ -1,7 +1,9 @@
 import 'package:flood_detector/Profil/profil_screen.dart';
 import 'package:flood_detector/constants.dart';
 import 'package:flood_detector/laporanScreen/reportScreen.dart';
+import 'package:flood_detector/map/map_screen.dart';
 import 'package:flood_detector/signUp/signUp.dart';
+import 'package:flood_detector/cuaca/cuaca.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -189,6 +191,109 @@ class _Dashboard_menuState extends State<Dashboard_menu> {
                   ),
                 ),
               ),
+              //BATAS
+              //WEATHER
+              Container(
+                child: Container(
+                  margin: EdgeInsets.symmetric(
+                    horizontal: kDefaultPadding,
+                    vertical: kDefaultPadding / 2,
+                  ),
+                  height: 160,
+                  // width: 150,
+                  child: Stack(
+                    alignment: Alignment.bottomCenter,
+                    children: [
+                      Container(
+                        height: 136,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(22),
+                            color: kBlueColor,
+                            boxShadow: [kDefaultShadow]),
+                        child: Container(
+                          margin: EdgeInsets.only(right: 10),
+                          decoration: BoxDecoration(
+                              color: Colors.white70,
+                              borderRadius: BorderRadius.circular(22)),
+                        ),
+                      ),
+                      //image
+                      Positioned(
+                        right: 0,
+                        child: Container(
+                          padding:
+                          EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                          height: 160,
+                          width: 200,
+                          child: Image.asset("assets/img/weather_icon.png"),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 0,
+                        left: 0,
+                        child: SizedBox(
+                          height: 136,
+                          width: size.width - 200,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Spacer(),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: kDefaultPadding),
+                                child: Text(
+                                  "Cuaca",
+                                  style: GoogleFonts.poppins(
+                                      textStyle:
+                                      Theme.of(context).textTheme.display1,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              Spacer(),
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: kDefaultPadding * 1.5,
+                                  vertical: kDefaultPadding / 4,
+                                ),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(22),
+                                      topRight: Radius.circular(22)),
+                                  color: kSecondaryColor,
+                                ),
+                                child: GestureDetector(
+                                  // Cara Page Route
+                                  // Navigator.push(context,MaterialPageRoute(builder: (context) {return signUp();},),);
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) {
+                                          return Weather();
+                                        },
+                                      ),
+                                    );
+                                  },
+                                  child: Text(
+                                    "Detail",
+                                    style: GoogleFonts.lato(
+                                        textStyle: Theme.of(context)
+                                            .textTheme
+                                            .display1,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               // BATAS
               //MAPS
               Container(
@@ -263,7 +368,16 @@ class _Dashboard_menuState extends State<Dashboard_menu> {
                                 child: GestureDetector(
                                   // Cara Page Route
                                   // Navigator.push(context,MaterialPageRoute(builder: (context) {return signUp();},),);
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) {
+                                          return Map();
+                                        },
+                                      ),
+                                    );
+                                  },
                                   child: Text(
                                     "Detail",
                                     style: GoogleFonts.lato(
