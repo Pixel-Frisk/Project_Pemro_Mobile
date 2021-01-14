@@ -1,17 +1,16 @@
-# Project_Pemro_Moblie
+# flood_detector
 
--Deskripsi Project
-  aplikasi ini merupakan pusat informasi tentang banjir. dimana user bisa memberi informasi tentang banjir diwilayahnya/ wilayah tertentu. user juga bisa melihat tentang perkiraan cuaca, maupun fitur chat /informasi tentang bencana banjir
+A new Flutter application.
 
-Tgl: 28 Oktober 2020
-  -Form Login
-  
-Nama Kelompok :
+## Getting Started
 
-Mohamad Fikri Nurhalimi 182410103046
-Artha Gusfi Putra       182410103088
-Jefri Melian            182410103094
+This project is a starting point for a Flutter application.
 
+A few resources to get you started if this is your first Flutter project:
 
-Tgl: 12 November 2020
--Menambah Custom Widget dan ListView
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

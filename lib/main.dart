@@ -1,5 +1,7 @@
+import 'package:flood_detector/welcome/Welcome.dart';
 import 'package:flutter/material.dart';
-import 'package:flood_detector/login.dart';
+import 'package:flood_detector/constants.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,9 +15,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flood Detector',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        textTheme: GoogleFonts.poppinsTextTheme(),
+        primaryColor: kPrimaryCOLOR,
+        accentColor: kPrimaryCOLOR,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        scaffoldBackgroundColor: Colors.white,
       ),
-      home: login(),
+      home: welcome_screen(),
     );
   }
 }
